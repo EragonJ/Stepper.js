@@ -1,8 +1,8 @@
-var Slider = function($item, opts) {
+var Stepper = function($item, opts) {
 
     this.opts = $.extend({
-        prevButtonSel : '#slider-prev',
-        nextButtonSel : '#slider-next',
+        prevButtonSel : '#stepper-prev',
+        nextButtonSel : '#stepper-next',
         currentIndex : 0,
         autoStart : true,
         nextable : false,
@@ -11,7 +11,7 @@ var Slider = function($item, opts) {
         hideFirstAndLastButton : true,
         lateBinding : false,
         stepHintMode : false,
-        stepHintSel : '.slider-step',
+        stepHintSel : '.stepper-step',
         stepHintFormat : '步驟 {current}/{total}',
         stepCallback : false // need nextCallbacks array for functions
     }, opts);
@@ -62,7 +62,7 @@ var Slider = function($item, opts) {
     }
 };
 
-Slider.prototype = {
+Stepper.prototype = {
 
     isNextable : function() {
         return ( this.nextable === true ) ? true : false;
@@ -118,7 +118,7 @@ Slider.prototype = {
 
     resetNextClickEvent : function( id ) {
         var old = this.prevButtonSel;
-        $(old).unbind('click.sliderNext');
+        $(old).unbind('click.stepperNext');
 
         this.nextButtonSel = id;
         this.bindNextClickEvent();
@@ -126,7 +126,7 @@ Slider.prototype = {
 
     resetPrevClickEvent : function( id ) {
         var old = this.prevButtonSel;
-        $(old).unbind('click.sliderPrev');
+        $(old).unbind('click.stepperPrev');
 
         this.nextButtonSel = id;
         this.bindPrevClickEvent();
@@ -147,7 +147,7 @@ Slider.prototype = {
         var sel = this.opts.nextButtonSel;
 
         $.each( sel, function(i, id) {
-            $( id ).bind('click.sliderNext',  function() {
+            $( id ).bind('click.stepperNext',  function() {
                 that.next();
             });
         });
@@ -158,7 +158,7 @@ Slider.prototype = {
         var sel = this.opts.prevButtonSel;
 
         $.each( sel, function(i, id) {
-            $( id ).bind('click.sliderPrev',  function() {
+            $( id ).bind('click.stepperPrev',  function() {
                 that.prev();
             });
         });
@@ -219,13 +219,13 @@ Slider.prototype = {
     },
 
     /*
-     *  var slider = new Slider( $('.slides') );
+     *  var stepper = new Stepper( $('.slides') );
      *  
      *  if ( blahblah is true ) {
      *      slides.pass();
      *  }
      *
-     *  You can freely use slider.pass() if there is a validation event before
+     *  You can freely use stepper.pass() if there is a validation event before
      */
     pass : function() {
         this.nextable = true;
