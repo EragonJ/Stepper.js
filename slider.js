@@ -12,7 +12,7 @@ var Slider = function($item, opts) {
         lateBinding : false,
         stepHintMode : false,
         stepHintSel : '.slider-step',
-        stepHintFormat : '步驟 {current}/{total} - ',
+        stepHintFormat : '步驟 {current}/{total}',
         stepCallback : false // need nextCallbacks array for functions
     }, opts);
 

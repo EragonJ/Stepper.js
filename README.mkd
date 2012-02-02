@@ -1,0 +1,18 @@
+# Introduction #
+Slider
+
+# Usage #
+
+    var slider = new Slider( $('.slides'), {
+        stepHintMode : true,
+        prevButtonSel : ['#slider-prev'],
+        nextButtonSel : ['#slider-next'],
+    })
+
+# Author #
+
+EragonJ | 陳佳隆
+
+Email - eragonj [AT] eragonj.me
+
+Blog - [A humble navigator](http://eragonj.me)
