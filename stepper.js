@@ -11,8 +11,8 @@ var Stepper = function($item, opts) {
         hideFirstAndLastButton : true,
         lateBinding : false,
         stepHintMode : false,
-        stepHintSel : '.stepper-step',
-        stepHintFormat : '步驟 {current}/{total}',
+        stepHintSel : '.stepper-hint',
+        stepHintFormat : 'Step {current}/{total}',
         stepCallback : false // need nextCallbacks array for functions
     }, opts);
 
