@@ -1,0 +1,8 @@
+#wrapper{width:800px;margin:0 auto;padding:1em;}
+.button-bar #stepper-prev{float:left;}
+.button-bar #stepper-next{float:right;}
+.slides .form-horizontal{background:#EEE;padding:1em;}
+.slides .img-wrapper{margin:1em;text-align:center;}
+.slides h2{text-align:right;}
+.yahoo-hint{color:#662986;font-weight:800;}
+.clearfix{clear:both;}

@@ -1,0 +1,160 @@
+!!!5
+html
+    head
+        title Test Stepper
+        meta(http-equiv='content-type', content='text/html; charset=UTF-8')
+        link(rel='stylesheet', href='../public/lib/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='../public/css/registration-tour.css')
+        script(src='http://code.jquery.com/jquery-1.7.1.min.js')
+        script(src='../public/lib/bootstrap/js/bootstrap.js')
+        script(src='../public/js/global.js')
+        script(src='../stepper.js')
+        script
+            $(document).ready(function() {
+                var s = new Stepper( $('.slides'), {
+                    stepHintMode : true,
+                    circularMode : true,
+                    stepHintFormat : 'Registration Tour - {current} / {total}',
+                    prevButtonSel : ['#stepper-prev'],
+                    nextButtonSel : ['#stepper-next']
+                });
+            });
+    body
+        include includes/nav
+        #wrapper
+            .button-bar
+                button#stepper-prev.btn Go back
+                button#stepper-next.btn.btn-success Continue
+                .clearfix
+
+            h1.stepper-hint holder
+
+            .slides
+                form
+                    fieldset
+                        legend 
+                            | What would you think if you face this kind of registration flow ? ( Sorry , Yahoo :/ )
+                .img-wrapper
+                    img(src='../public/img/yahoo-registration.png')
+
+            .slides
+                form 
+                    fieldset
+                        legend
+                            | If you were a user, you may feel like this ...
+                .img-wrapper
+                    img(src='../public/img/wtf.jpg')
+
+            .slides
+                form
+                    fieldset
+                        legend
+                            | So, Yahoo, why don't you just try Stepper.js instead ?
+                .img-wrapper
+                    img(src='http://placehold.it/512x512', title='put logo here')
+
+            .slides
+                form
+                    fieldset
+                        legend.yahoo-hint Fill in your basic info
+                form.form-horizontal
+                    .control-group
+                        label.control-label Name
+                        .controls
+                            input(type='text', placeholder='First Name') 
+                            &nbsp;
+                            input(type='text', placeholder='Last Name')
+                    .control-group
+                        label.control-label Gender
+                        .controls
+                            select
+                                option - Select One -
+                    .control-group
+                        label.control-label Birthday
+                        .controls
+                            select
+                                option - Select Month -
+                            &nbsp;
+                            input.input-small(type='text', placeholder='Day')
+                            &nbsp;
+                            input.input-small(type='text', placeholder='Year')
+                    .control-group
+                        label.control-label Country
+                        .controls
+                            select
+                                option Taiwan 
+                    .control-group
+                        label.control-label Language
+                        .controls
+                            select
+                                option English
+                    .control-group
+                        label.control-label Postal Code
+                        .controls
+                            input(type='text')
+            .slides
+                form
+                    fieldset
+                        legend.yahoo-hint Select an ID and password
+                form.form-horizontal
+                    .control-group
+                        label.control-label Yahoo! ID and Email
+                        .controls
+                            input(type='text')
+                            @
+                            select
+                                option yahoo.com
+                            &nbsp;
+                            button.btn(type='reset') Check
+                    .control-group
+                        label.control-label Password
+                        .controls
+                            input(type='text')
+                    .control-group
+                        label.control-label Re-type Password
+                        .controls
+                            input(type='text')
+            .slides
+                form 
+                    fieldset
+                        legend.yahoo-hint In case you forget your ID or password ... 
+                form.form-horizontal
+                    .control-group
+                        label.control-label Alternate Email
+                        .controls
+                            input(type='text')
+                    .control-group
+                        label.control-label Secret Question 1
+                        .controls
+                            select
+                                option - Select One -
+                    .control-group
+                        label.control-label Your Answer
+                        .controls
+                            input(type='text')
+                    .control-group
+                        label.control-label Secret Question 1
+                        .controls
+                            select
+                                option - Select One -
+                    .control-group
+                        label.control-label Your Answer
+                        .controls
+                            input(type='text')
+                    .form-actions
+                        button.btn.btn-primary(type='reset') Create My Account
+            .slides
+                form
+                    fieldset
+                        legend 
+                            | It is Easy , right !? To be honest, this registration tour is made by Stepper.js itself !
+                script(src='https://gist.github.com/1751017.js?file=gistfile1.js')
+                h2 with only 9 lines of javascript code !
+            
+            .slides
+                form
+                    fieldset
+                        legend Feel excited !? Go ahead downloading Stepper.js to build your own step-by-step flow !
+                .img-wrapper
+                    a(href='https://github.com/EragonJ/Stepper.js', target='_blank')
+                        img(src='../public/img/download.png')
