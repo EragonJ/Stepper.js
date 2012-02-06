@@ -1,5 +1,5 @@
 # Introduction #
-Stepper - a javascript plugin that can help you make a **step by step** flow on the fly.
+Stepper - a lightweight step-by-step flow generator
 
 # Usage #
 
@@ -9,6 +9,8 @@ Stepper - a javascript plugin that can help you make a **step by step** flow on 
         nextButtonSel : ['#stepper-next'],
     })
 
+... to be continued
+
 # Author #
 
 EragonJ | 陳佳隆 ( Chia-Lung, Chen )
@@ -16,6 +18,9 @@ EragonJ | 陳佳隆 ( Chia-Lung, Chen )
 Email - eragonj [AT] eragonj.me
 
 Blog - [A humble navigator](http://eragonj.me)
+
+# Demo #
+* [Registration Tour](http://eragonj.github.com/Stepper.js/examples/registration-tour.html)
 
 # MIT-LICENSE #
 
