@@ -1,5 +1,4 @@
 var Stepper = function($item, opts) {
-
     this.opts = $.extend({
         prevButtonSel : '#stepper-prev',
         nextButtonSel : '#stepper-next',
@@ -167,7 +166,11 @@ Stepper.prototype = {
     next : function() {
 
         if ( this.hasCallback() ) {
-            this.execAftCallback();
+
+            // block when not passed
+            if (!this.execAftCallback()) {
+                return false;
+            }
         }
 
         if ( this.isNextable() ) {
@@ -279,7 +282,7 @@ Stepper.prototype = {
         }
 
         if ( cb !== null && cb !== undefined ) {
-            cb();
+            return cb();
         }
     }
 };
