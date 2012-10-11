@@ -282,7 +282,8 @@ Stepper.prototype = {
         }
 
         if ( cb !== null && cb !== undefined ) {
-            return cb();
+            var result = cb.call(this);
+            return result;
         }
     }
 };
