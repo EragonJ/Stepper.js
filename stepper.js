@@ -1,4 +1,5 @@
 var Stepper = function($item, opts) {
+
     this.opts = $.extend({
         prevButtonSel : '#stepper-prev',
         nextButtonSel : '#stepper-next',
@@ -285,5 +286,9 @@ Stepper.prototype = {
             var result = cb.call(this);
             return result;
         }
+    },
+
+    getCurrentIndex : function() {
+        return this.currentIndex;
     }
 };
